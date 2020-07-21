@@ -1,0 +1,44 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a href="#">Main Menu</a>
+  <a href="#"><i class="fas fa-folder mr-2"></i>คลังเอกสาร</a>
+  <a href="#"><i class="fas fa-check-square mr-2"></i>เอกสารเวียนทราบ</a>
+  <a href="#"><i class="fas fa-file-import mr-2"></i>เอกสารส่งออก</a>
+  <a href="#"><i class="fas fa-file-signature mr-2"></i>เอกสารขออนุมัติ</a>
+  <a [routerLink]="['/command-add-file']">สั่งการ/เวียนทราบ</a>
+  <a href="#"><i class="far fa-file-pdf mr-2"></i>รายงานการใช้กระดาษ</a>
+</div>
+
+<div class="container-main" id="main">
+  <div class="content">
+    <div class="content-header">
+      <span (click)="openNav()" class="menu-btn"><i class="fas fa-bars fa-3x"></i></span>
+      <!-- เปลี่ยน title -->
+      <span class="text">ABOUT</span>
+    </div>
+    <div class="img-container">
+      <img src="/assets/about.jpg" />
+    </div>
+    <div class="logo-container mt-3">
+      <img src="/assets/logoabout.png" />
+    </div>
+    <div class="title-container mt-3">
+
+      <span>ร.ต.หญิงจิตรอนงค์ เพ็ชรมีศรี</span><br>
+      <span>พ.จ.ต.จิระศักดิ์ ชุมศรี</span><br>
+      <span>ส.อ.หญิงสุภัทรา ศิริเรืองศิลป์</span>
+    </div>
+    <div class="user-container mt-3">
+      <img class="mr-2" src="/assets/9661.jpg" />
+      <img class="mr-2" src="/assets/9662.jpg" />
+      <img src="/assets/9660.jpg" />
+    </div>
+    <div class="content-footer">
+      <span class="icon-container" style="margin-left: 40px; margin-right: 60px"><i
+          class="fas fa-hotel fa-2x"></i></span>
+      <span class="icon-container" style="margin-right: 60px;"><i class="fas fa-book fa-2x"></i></span>
+      <span class="icon-container" style="margin-right: 60px;"><i class="fas fa-paste fa-2x"></i></span>
+      <span class="icon-container"><i class="fas fa-graduation-cap fa-2x"></i></span>
+    </div>
+  </div>
+</div>
