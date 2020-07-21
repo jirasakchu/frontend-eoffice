@@ -4,6 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { CommandAddFileComponent } from './command-add-file/command-add-file.component';
+import { CommandSelectUserComponent } from './command-select-user/command-select-user.component';
+import { CommandCheckComponent } from './command-check/command-check.component';
 
 
 const routes: Routes = [
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: "register", component: RegisterComponent },
   { path: "home", component: HomeComponent },
   { path: "command-add-file", component: CommandAddFileComponent },
+  { path: "command-select-user", component: CommandSelectUserComponent },
+  { path: "command-check", component: CommandCheckComponent },
   {
     path: "**",
     redirectTo: "/login"

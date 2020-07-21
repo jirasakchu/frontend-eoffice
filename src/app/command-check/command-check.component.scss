@@ -1,32 +1,34 @@
 /* The side navigation menu */
 .sidenav {
   height: 100%;
-  width: 300;
+  width: 300px;
+
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   //เปลี่ยนสีพื้นหลัง slide menu
-  background-color: rgb(0, 255, 760, 0.3);
-  overflow-x: auto;
-  padding-top: 50px;
+  background-color: rgba(70, 10, 180, 0.3);
+  overflow-x: hidden;
+  padding-top: 60px;
   transition: 0.5s;
 }
+
 
 /* The navigation menu links */
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 25px;
   //สีตัวอักษร slide menu และ icon
-  color: #1e14a8;
+  color: #ffffff;
   display: block;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: blue;
+  color: #cc1212;
 }
 
 /* Position and style the close button (top right corner) */
@@ -45,9 +47,10 @@
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 550px) {
+@media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
+    // width: 450px;
   }
 
   .sidenav a {
@@ -57,7 +60,6 @@
 
 .container-header {
   position: relative;
-
 
 }
 
@@ -72,6 +74,7 @@
     width: 400px;
     height: 600px;
     // background home
+    // background-color: rgba(0, 0, 0, 0.3);
     background-color: white;
     position: relative;
 
@@ -83,65 +86,76 @@
 
       .menu-btn {
         //เปลี่ยนสี Burger Menu
-        color: white;
+        color: black;
         vertical-align: middle;
       }
 
-      .text {
-        //เปลี่ยนสี title
-        color: white;
-        margin-left: 25px;
-        font-size: 30px;
-        vertical-align: middle;
-        font-weight: bold;
-      }
-    }
+      .notify-container {
+        float: right;
+        margin-right: 10px;
 
-
-
-    .img-container {
-      text-align: center;
-
-      img {
-        width: 100%;
-        height: 210px;
-        max-width: 800px;
-      }
-    }
-
-    .logo-container {
-      img {
-        width: 100px;
-        // border-radius: 35px;
-        // border: 2px solid #a97979a6;
-      }
-    }
-
-    .title-container {
-      //เปลี่ยนชื่อสำนักงาน
-      color: rgb(92, 92, 92);
-      font-size: 25px;
-    }
-
-    .content-footer {
-      background-color: rgb(0, 255, 64);
-      position: absolute;
-      margin: auto;
-      text-align: left;
-      width: 400px;
-      bottom: 0;
-      height: 50px;
-      //เงา bottom
-      box-shadow: 0px -3px 3px 0px violet;
-
-      .icon-container {
-        color: white;
-
-        i {
-          margin-top: 8px;
+        .icon {
+          margin-right: 10px;
         }
       }
     }
-  }
 
+    .main-content {
+      top: 60px;
+      position: relative;
+
+      .top-container {
+        padding: 10px 0px;
+        margin: 0px 10px;
+        background-color: rgba(211, 211, 211, 0.3);
+
+        .step-container {
+          text-align: center;
+
+          .step-item {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #969696;
+            border-radius: 20px;
+            background-color: white;
+
+            &.active {
+              background-color: rgb(44, 147, 231);
+            }
+          }
+
+          .space {
+            display: inline-block;
+            width: 20px;
+          }
+        }
+
+        .label-container {
+          .text {
+            display: inline-block;
+            color: white;
+            background-color: rgb(44, 147, 231);
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .document-container {
+        text-align: left;
+        padding: 10px;
+
+
+      }
+
+      .bottom-container {
+        padding: 10px;
+
+
+      }
+    }
+  }
 }
