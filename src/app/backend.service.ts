@@ -53,4 +53,16 @@ export class BackendService {
     });
   }
   // จบ code2
+  uploadFile(fileInput: any): Promise<any> {
+    return new Promise((resolve, rejects) => {
+      const formData = new FormData();
+      formData.append('file', fileInput);
+      this.http.post(backendUrl + 'uploadFile', formData)
+        .subscribe((res) => {
+          resolve(res);
+        }, (err) => {
+          rejects(err.message);
+        })
+    })
+  }
 }
