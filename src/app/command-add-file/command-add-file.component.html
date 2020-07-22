@@ -1,6 +1,7 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-  <a href="#"><i class="fas fa-comment-medical fa-lg mr-2"></i>คลังเอกสาร</a>
+  <a href="#">Main Menu</a>
+  <a [routerLink]="['/owner-document-list']"><i class="fas fa-comment-medical fa-lg mr-2"></i>คลังเอกสาร</a>
   <a [routerLink]="['/user-document-list']"><i class="fas fa-check-square mr-2"></i>เอกสารเวียนทราบ
     <span *ngIf="actionNumber != 0" class="badge badge-danger">{{actionNumber}}</span>
   </a>
