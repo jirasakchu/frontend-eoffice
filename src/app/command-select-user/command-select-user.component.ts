@@ -37,7 +37,7 @@ export class CommandSelectUserComponent implements OnInit {
 
   openNav() {
     //ความกว้างของ slide menu
-    document.getElementById("mySidenav").style.width = "420px";
+    document.getElementById("mySidenav").style.width = "300px";
   }
 
   closeNav() {

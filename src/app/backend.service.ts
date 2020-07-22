@@ -53,6 +53,7 @@ export class BackendService {
     });
   }
   // จบ code2
+
   uploadFile(fileInput: any): Promise<any> {
     return new Promise((resolve, rejects) => {
       const formData = new FormData();
@@ -65,6 +66,7 @@ export class BackendService {
         })
     })
   }
+
   getUserAll(): Promise<any> {
     return new Promise((resolve) => {
       this.http
