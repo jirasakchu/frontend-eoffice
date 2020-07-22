@@ -8,6 +8,7 @@ import { CommandSelectUserComponent } from './command-select-user/command-select
 import { CommandCheckComponent } from './command-check/command-check.component';
 import { AboutComponent } from './about/about.component';
 import { AuthGuard } from './auth.guard';
+import { LogoutComponent } from './logout/logout.component';
 
 
 const routes: Routes = [
@@ -15,10 +16,11 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "home", component: HomeComponent, canActivate: [AuthGuard] },
-  { path: "command-add-file", component: CommandAddFileComponent },
-  { path: "command-select-user", component: CommandSelectUserComponent },
-  { path: "command-check", component: CommandCheckComponent },
+  { path: "command-add-file", component: CommandAddFileComponent, canActivate: [AuthGuard] },
+  { path: "command-select-user", component: CommandSelectUserComponent, canActivate: [AuthGuard] },
+  { path: "command-check", component: CommandCheckComponent, canActivate: [AuthGuard] },
   { path: "about", component: AboutComponent },
+  { path: "logout", component: LogoutComponent },
   {
     path: "**",
     redirectTo: "/login"

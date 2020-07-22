@@ -14,6 +14,7 @@ import { CommandAddFileComponent } from './command-add-file/command-add-file.com
 import { CommandSelectUserComponent } from './command-select-user/command-select-user.component';
 import { CommandCheckComponent } from './command-check/command-check.component';
 import { AboutComponent } from './about/about.component';
+import { LogoutComponent } from './logout/logout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { AboutComponent } from './about/about.component';
     CommandAddFileComponent,
     CommandSelectUserComponent,
     CommandCheckComponent,
-    AboutComponent
+    AboutComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
