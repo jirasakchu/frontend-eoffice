@@ -13,6 +13,8 @@ export class CommandCheckComponent implements OnInit {
   userData: any;
   documentList: Array<any>;
   backendUrl = environment.backendUrl;
+  actionNumber: number = 0;
+
   constructor(private backendService: BackendService) { }
 
   ngOnInit(): void {
@@ -21,6 +23,9 @@ export class CommandCheckComponent implements OnInit {
       console.log(data.dataList);
       this.documentList = data.dataList;
     });
+    this.backendService.getCountDocumentByUser(this.userData.id).then(data => {
+      this.actionNumber = data.dataList.users_action;
+    })
   }
 
   openNav() {

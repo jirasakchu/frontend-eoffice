@@ -15,6 +15,7 @@ export class UserDocumentListComponent implements OnInit {
   documentDoneList: Array<any> = Array();
   waitingNumber: number = 0;
   backendUrl = environment.backendUrl;
+  actionNumber: number = 0;
 
   constructor(private backendService: BackendService) { }
 
@@ -34,6 +35,9 @@ export class UserDocumentListComponent implements OnInit {
 
       })
     });
+    this.backendService.getCountDocumentByUser(this.userData.id).then(data => {
+      this.actionNumber = data.dataList.users_action;
+    })
   }
 
   openNav() {

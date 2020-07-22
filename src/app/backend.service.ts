@@ -135,4 +135,16 @@ export class BackendService {
         });
     });
   }
+  getCountDocumentByUser(id): Promise<any> {
+    let headerSpecify = this.httpOptions;
+    headerSpecify.params = { id };
+    return new Promise((resolve) => {
+      this.http
+        .get<any>(backendUrl + "document/get-count-waiting-by-user", headerSpecify)
+        .pipe()
+        .subscribe((data) => {
+          resolve(data);
+        });
+    });
+  }
 }
