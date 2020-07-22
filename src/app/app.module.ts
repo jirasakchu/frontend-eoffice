@@ -17,6 +17,7 @@ import { AboutComponent } from './about/about.component';
 import { LogoutComponent } from './logout/logout.component';
 import { UserDocumentListComponent } from './user-document-list/user-document-list.component';
 import { OwnerListDocumentComponent } from './owner-list-document/owner-list-document.component';
+import { UserSettingComponent } from './user-setting/user-setting.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { OwnerListDocumentComponent } from './owner-list-document/owner-list-doc
     AboutComponent,
     LogoutComponent,
     UserDocumentListComponent,
-    OwnerListDocumentComponent
+    OwnerListDocumentComponent,
+    UserSettingComponent
   ],
   imports: [
     BrowserModule,
