@@ -1,11 +1,11 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
   <a href="#"><i class="fas fa-comment-medical fa-lg mr-2"></i>คลังเอกสาร</a>
-  <a href="#">เอกสารเวียนทราบ</a>
-  <a href="#">เอกสารส่งออก</a>
-  <a href="#">เอกสารขออนุมัติ</a>
+  <a [routerLink]="['/user-document-list']"><i class="fas fa-check-square mr-2"></i>เอกสารเวียนทราบ</a>
+  <a href="#"><i class="fas fa-file-import mr-2"></i>เอกสารส่งออก</a>
+  <a href="#"><i class="fas fa-file-signature mr-2"></i>เอกสารขออนุมัติ</a>
   <a [routerLink]="['/command-add-file']">สั่งการ/เวียนทราบ</a>
-  <a href="#">รายงานการใช้กระดาษ</a>
+  <a href="#"><i class="far fa-file-pdf mr-2"></i>รายงานการใช้กระดาษ</a>
   <a [routerLink]="['/logout']"><i class="fas fa-sign-out-alt fa-lg mr-2"></i>ออกจากระบบ</a>
 
 </div>
