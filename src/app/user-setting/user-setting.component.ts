@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 export class UserSettingComponent implements OnInit {
   userData: any;
   form: FormGroup;
+  actionNumber: number = 0;
+
   constructor(private backendService: BackendService, private formBuilder: FormBuilder,
     private router: Router,) { }
 
@@ -20,6 +22,9 @@ export class UserSettingComponent implements OnInit {
     this.form = this.formBuilder.group({
       uid: ["", Validators.required],
     });
+    this.backendService.getCountDocumentByUser(this.userData.id).then(data => {
+      this.actionNumber = data.dataList.users_action;
+    })
   }
 
   openNav() {
